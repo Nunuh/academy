@@ -13,13 +13,16 @@
     <div style="width:600px; height:100%; margin:0px auto;">
         <table style="border-collapse:collapse;width:590px;background:#ffffff;margin:auto">
             <tbody>
-            <tr>
+            <tr  style="background-color:#fef9f3">
+                <td colspan="2"  style="width:100%" align="center"></td>
+            </tr>
+            <tr  style="background-color:#fef9f3">
                 <td colspan="2"  style="width:100%" align="center">
                     <img src="https://academy.jahitin.com/img/jahitin.png" alt="jahitin.com" class="CToWUd" width="150">
                     <hr>
                 </td>
             </tr>
-            <tr height="48">
+            <tr height="48"  style="background-color:#fef9f3">
                 <td style="padding:0 25px;width:50%" align="left">
                     <p style="margin:5px 0;font-size:14px;line-height:1.8">
                         <?php Carbon\Carbon::setLocale('id');?>
@@ -29,7 +32,7 @@
                     <p style="margin:5px 0;font-size:14px;line-height:1.8">{{Carbon\Carbon::parse($user->updated_at)->translatedFormat('h:i')}}</p>
                 </td>
             </tr>
-            <tr>
+            <tr  style="background-color:#fef9f3">
                 <td colspan="2" style="padding:0 25px;width:50%">
                     <div style="display:inline-flex">
                         <h3 style="margin-right:8px;font-weight:400;margin-bottom:8px">Halo,</h3>
@@ -40,7 +43,7 @@
             <tr style="background-color:#fef9f3">
                 <td colspan="2" style="width:50%" align="center">
                     <a href="https://academy.jahitin.com" rel="noreferrer noreferrer" target="_blank">
-                        <img style="max-width:535px;margin:2rem" src="https://academy.jahitin.com/img/img-verify.jpg" alt="product" class="CToWUd">
+                        <img style="max-width:535px;margin:2rem" src="https://academy.jahitin.com/img/datang-2.png" alt="product" class="CToWUd">
                     </a>
                 </td>
             </tr>
@@ -54,22 +57,23 @@
             </tr>
             <tr style="background-color:#fef9f3" height="80">
                 <td colspan="2" style="width:50%" align="center">
+                <br>
                     <a style="text-decoration:none;padding:1em 1.5em;text-decoration:none;text-transform:uppercase;font-weight:bold;color:white;background-color:#7e1037;border-radius:5px" href="https://academy.jahitin.com" rel="noreferrer noreferrer" target="_blank">
-                        Coba Sekarang
+                        Ikuti Sekarang
                     </a>
                 </td>
             </tr>
-            <tr>
+            <tr  style="background-color:#fef9f3">
                 <td colspan="2" style="width:50%">
                     <hr style="width:540px">
                 </td>
             </tr>
-            <tr height="60">
+            <tr height="60"  style="background-color:#fef9f3">
                 <td colspan="2" style="width:50%" align="center">
                     <h1 style="margin:2rem 0 1rem 0">Butuh Bantuan?</h1>
                 </td>
             </tr>
-            <tr height="30">
+            <tr height="30"  style="background-color:#fef9f3">
                 <td colspan="2" style="width:50%" align="center">
                     <p style="margin:auto;font-size:14px;line-height:1.8">Untuk informasi lebih lanjut dan bertanya, silahkan
                         menghubungi</p>
@@ -82,7 +86,7 @@
                     </p>
                 </td>
             </tr>
-            <tr height="120">
+            <tr height="120"  style="background-color:#fef9f3">
                 <td colspan="2" style="width:50%" align="center">
                     <a style="text-decoration:none" href="https://www.youtube.com/channel/UCPXEdtrmRtvZZYVXGPk0qUA" rel="noreferrer noreferrer" target="_blank">
                         <img style="margin:12px" src="https://e7.pngegg.com/pngimages/901/503/png-clipart-black-play-button-icon-youtube-computer-icons-social-media-play-button-angle-rectangle.png" alt="Youtube" class="CToWUd" width="32">
@@ -93,12 +97,12 @@
                     </a>
                 </td>
             </tr>
-            <tr>
+            <tr  style="background-color:#fef9f3">
                 <td colspan="2" style="width:50%">
                     <hr style="width:540px">
                 </td>
             </tr>
-            <tr height="90">
+            <tr height="90"  style="background-color:#fef9f3">
                 <td colspan="2" style="width:50%" align="center"> 
                     <img src="https://academy.jahitin.com/img/jahitin.png" alt="Jahitin.com" class="CToWUd" width="100">
                 </td>
