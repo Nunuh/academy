@@ -1,0 +1,38 @@
+/*
+MeanMenu 2.0.7
+--------
+To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
+*/
+
+a.meanmenu-reveal {
+    display: none;
+}
+.mean-container .mean-bar {
+    float: left;
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    padding: 0 0 0;
+    z-index: 999;
+}
+.mean-container .mean-nav {
+    float: left;
+    width: 100%;
+    background: #fff;
+    margin-top: 62px;
+}
+.mean-container .mean-push {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    clear: both;
+}
+.mean-nav .wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.mean-remove {
+    display: none !important;
+}

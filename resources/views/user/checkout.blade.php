@@ -1,0 +1,174 @@
+@extends('layout')
+<title> Pembayaran | Jahitin Academy </title>
+@section('isi')<!-- Start Page Title Area -->
+<!-- Start Page Title Area -->
+<div class="page-title-area item-bg1 jarallax" data-jarallax='{"speed": 0.3}'>
+    <div class="container">
+        <div class="page-title-content">
+            <ul>
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li>Checkout</li>
+            </ul>
+            <h2>Pembayaran Kelas</h2>
+        </div>
+    </div>
+</div>
+
+<style>
+
+.info-bank {
+    display: none;
+}
+
+.btn-confirmation {
+    background: #1abc9c;
+    border: #1abc9c;
+}
+
+.btn-confirmation:hover {
+    background: #16a487;
+    border: #16a487;
+}
+    </style>
+@if(session()->has('message'))
+    <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ session()->get('message') }}
+    </div>
+@endif
+<div class="container" style="padding:50px 15px;">
+    <div class="row justify-content-center">
+        <div class="col col-12 col-lg-7">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-start">
+                        <img class="thumbnail-kelas" src="{{ asset('images/course/'. $course->thumbnail)}}"alt="image">
+                    </div>
+                    <h6 class="line-height-1 mb-0 mt-3">{{ $course->judul }}</h6>
+                            <p class="h6 text-gray-500 mb-0">Diselenggarakan oleh Jahitin Tim</p>
+                    <hr>
+
+                    <h6 class="h6 mb-0 line-height-1 mb-3">Kelas akan diberikan kepada {{ $user->name }}</h6>
+                    <div class="form-group form-group__icon">
+                        <input id="email" type="email" name="email" required="" autocomplete="email" autofocus=""
+                               class="form-control" aria-describedby="emailHelp" placeholder="Alamat Email"
+                               value="{{ $user->email }}" readonly="" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-materi-preview col col-12 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="h6 mb-0 line-height-1 mb-3">Pembayaran</h6>
+                    <div class="d-flex justify-content-between mb-3">
+                        <p class="line-height-1 h7 text-gray-500 mb-0">Harga Kelas</p>
+                        <h6 class="line-height-1 mb-0 ">Rp. {{ number_format($course->harga) }}</h6>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <p class="line-height-1 h7 text-gray-500 mb-0">Kode Unik : </p>
+                        <h6 class="line-height-1 mb-0 ">Rp. {{ number_format($kode) }}</h6>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3">
+                        <p class="line-height-1 h7 text-gray-500 mb-0">Total Harga : </p>
+                        <h6 class="line-height-1 mb-0 "><b>Rp. {{ number_format($kode+$course->harga) }}</b></h6>
+                    </div>
+                    <div class="info-bank">
+                        <hr>
+                        <h6 class="h6 mb-0 line-height-1 mb-3">Transfer Pembayaran:</h6>
+                        <div class="item-bank-kelas">
+                            <div class="d-flex justify-content-between mb-3">
+                                <img
+                                    src="{{ asset('img/bca.png')}}"
+                                    style="height:30px;">
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">Bank</p>
+                                <h6 class="line-height-1 mb-0">BCA</h6>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">No. Rekening</p>
+                                <h6 class="line-height-1 mb-0">667 013 4910</h6>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">Penerima</p>
+                                <p class="line-height-1 mb-0" style="font-size:11pt;color: #000;font-weight: 600;">Siti Maidah</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="item-bank-kelas">
+                            <div class="d-flex justify-content-between mb-3">
+                                <img
+                                    src="{{ asset('img/bri.png')}}"
+                                    style="height:30px;">
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">Bank</p>
+                                <h6 class="line-height-1 mb-0">BRI</h6>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">No. Rekening</p>
+                                <h6 class="line-height-1 mb-0">00510 11376 68504</h6>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">Penerima</p>
+                                <p class="line-height-1 mb-0" style="font-size:11pt;color: #000;font-weight: 600;">Asri Wijayanti</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="item-bank-kelas">
+                            <div class="d-flex justify-content-between mb-3">
+                                <img
+                                    src="{{ asset('img/mandiri.png')}}"
+                                    style="height:30px;">
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">Bank</p>
+                                <h6 class="line-height-1 mb-0">Mandiri</h6>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">No. Rekening</p>
+                                <h6 class="line-height-1 mb-0">14100 1887 2176</h6>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">Penerima</p>
+                                <p class="line-height-1 mb-0" style="font-size:11pt;color: #000;font-weight: 600;">Asri Wijayanti</p>
+                            </div>
+                            <hr>
+                        </div>
+                        <h6 class="h6 mb-0 line-height-1 mb-3">Konfirmasi Pembayaran:</h6>
+                        <div class="item-bank-kelas">
+                            <div class="d-flex justify-content-between mb-3">
+                                <img src="https://buildwithangga.com/images/logo_whatsapp.png" style="height:40px;">
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <p class="line-height-1 h7 text-gray-500 mb-0">Jahitin Tim</p>
+                                <h6 class="line-height-1 mb-0">628176627555</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                 <a href="#" style="font-size: 16px !important;" class="btn btn-info btn-block font-weight-medium btn-lanjutkan-bayar">LANJUTKAN PEMBAYARAN</a>
+                    <form action="{{ route('bayar.course', ['kode'=>$kode]) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <input type="hidden" name="course" value="{{ $course->id }}">
+                        <button style="padding: 10px 0px;color:#fff;" type="submit" class="mt-0 btn btn-primary btn-block font-weight-medium btn-confirmation">KONFIRMASI PEMBAYARAN</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+        $('.btn-confirmation').css('display', 'none');
+
+        $('.btn-lanjutkan-bayar').click(function(e) {
+            $('.info-bank').fadeIn();
+            $('.btn-lanjutkan-bayar').css('display', 'none');
+            $('.btn-confirmation').fadeIn();
+            e.preventDefault();
+        });
+</script>
+@endsection
